@@ -1,0 +1,90 @@
+<html>
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Camera Settings</title>
+        <link rel="stylesheet" href="camera-settings.css" />
+         <!-- Load d3.js -->
+        <script src="https://d3js.org/d3.v5.js"></script>
+
+        <!-- Loading in Caman (finally!)-->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.min.js"></script>
+
+    </head>
+
+    <body>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Gravitas+One&display=swap');
+        </style>
+        <!-- Header -->
+        <h1 align = 'center'>CAMERA SETTINGS: LIGHTING</h1>
+        <img src="IMG_7447.png" alt="exposure triangle" width="20%" height="30%">
+        <script src="camera-settings.js"></script>
+        <!-- Definition Headers-->
+        <h4>Aperture: </h4 >
+            <p>The opening in a lens through which light passes to enter the camera and is measured in 'F-stop'. </p>
+        <h4>ISO:</h4> 
+            <p>How sensitive the sensor/film is to light. ISO is its' own measurement.</p>
+        <h4>Shutter Speed:</h4> 
+            <p>How fast the shutter closes and is measured in seconds. </p>
+        <br>
+        <br>
+        <h2> Let's mess around with the settings</h2>   
+
+        <!-- Image in the Canavas -->
+        <canvas id="legoMan" width="1080" height="920" data-caman-id="0" style="width: 600px; height: 401px;"></canvas>
+        <br>
+        <div id="lightingTriangle">
+
+            <div class="Lighting">
+                <div class="lightingName">
+                    <p>Aperture</p>
+                </div>
+                <div class="lightingSetting"
+                    type="range" 
+                    min="1"
+                    max="32"
+                    step="1"
+                    value="0"
+                    data-filter="brightness"
+                  >
+                  <span class="FilterValue">0</span>
+          
+                </div>
+            </div>
+
+            <div class="Lighting">
+                <div class="lightingName">
+                    <p>ISO</p>
+                </div>
+                <div class="lightingSetting">
+                    
+                </div>
+            </div>
+
+            <div class="Lighting">
+                <div class="lightingName">
+                    <p>Shutter Speed</p>
+                </div>
+                <div class="lightingSetting">
+                    
+                </div>
+            </div>
+
+        </div>
+        <!-- Comparing to Original Image -->
+        <h4>Comparing to the original image</h4>
+        <img src="http://127.0.0.1:5500/Lego.JPG" width="1080" height="920" style="width: 600px; height: 401px;">
+
+
+    </body>
+    <br>
+    <br>
+    <footer> This website was created by Abigail Leon to fulfill 
+        the requirements of <a href="https://rpruim.github.io/D3/"> Math W82: Data Visualization with D3</a> 
+        at Calvin University, January 2020. 
+    </footer>
+</html>
