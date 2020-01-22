@@ -79,19 +79,17 @@
 <!-- SLIDER -->
 <p id="value">Move me</p>
 <div id="value"></div>
-<a id="setValue" href="#">Set value</a>
-<a id="changeWidth" href="#">Change width</a>
 <script>
   var data = [1, 1.4, 2, 2.8, 4, 5.6, 8, 11, 16, 22];
 
   var slider = d3Slider.sliderHorizontal()
     .domain(d3.extent(data))
     .width(300)
-    .tickFormat(data.map())
+    .tickFormat(function(d) {return d})
     .ticks(data.length)
-    .default(0)
+    .default(data[0])
     .on('onchange', val => {
-      d3.select("p#value").text(function(d) {return d});
+      d3.select("p#value").text((val));
     });
 
   var g = d3.select("div#value").append("svg")
