@@ -14,9 +14,13 @@ footer {
 .column {
     column-count: 1;
     float: left;
-    column-gap: 30px;
 }
 
+.lightingName.column{
+    /* column-count: 1; */
+    /* column-fill: balance; */
+    /* column-gap: 100px; */
+}
 
 
 /* <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
