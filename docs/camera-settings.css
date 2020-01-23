@@ -12,7 +12,9 @@ footer {
 }
 
 .column {
+    column-count: 1;
     float: left;
+    column-gap: 30px;
 }
 
 
