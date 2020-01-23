@@ -62,9 +62,51 @@
         <!-- end of image div -->
         <hr>
         <h3> Use the tools below to change the exposure of the image</h3>   
-        
+
+        <!-- THREE EXPOSURE TOOLS IN COLUMNS -->
+
+        <div class="row">
+            <div class="column" style="background-color:#aaa;">
+              <h2>Aperture</h2>
+            <!-- <button id='apertureButton'>F-Stop</button> <br> -->
+                <input type="radio" name="F-Stop" value="1" id="f1"> 1     <br><br>
+                <input type="radio" name="F-Stop" value="1.4" id="f2"> 1.4 <br><br>
+                <input type="radio" name="F-Stop" value="2" id="f3"> 2     <br><br>
+                <input type="radio" name="F-Stop" value="2.8" id="f4"> 2.8 <br><br>
+                <input type="radio" name="F-Stop" value="4" id="f5"> 4     <br><br>
+                <input type="radio" name="F-Stop" value="5.6" id="f6"> 5.6 <br><br>
+                <input type="radio" name="F-Stop" value="8" id="f7"> 8     <br><br>
+                <input type="radio" name="F-Stop" value="11" id="f8"> 11   <br><br>
+                <input type="radio" name="F-Stop" value="16" id="f9"> 16   <br><br>
+
+            </div>
+            <div class="column" style="background-color:#bbb;">
+              <h2>ISO</h2>
+                <input type="radio" id="ISO" value="50" id="iso1"> 50      <br><br>
+                <input type="radio" name="ISO" value="100" id="iso2"> 100    <br><br>
+                <input type="radio" name="ISO" value="200" id="iso3"> 200    <br><br>
+                <input type="radio" name="ISO" value="400" id="iso4"> 400    <br><br>
+                <input type="radio" name="ISO" value="800" id="iso5"> 800    <br><br>
+                <input type="radio" name="ISO" value="1600" id="iso6"> 1600  <br><br>
+                <input type="radio" name="ISO" value="3200" id="iso7"> 3200  <br><br>
+                <input type="radio" name="ISO" value="6400" id="iso8"> 6400  <br><br>
+            </div>
+            <div class="column" style="background-color:#ccc;">
+              <h2>Shutter Speed</h2>
+                <input type="radio" id="ISO" value="50" id="iso1"> 50      <br><br>
+                <input type="radio" name="ISO" value="100" id="iso2"> 100    <br><br>
+                <input type="radio" name="ISO" value="200" id="iso3"> 200    <br><br>
+                <input type="radio" name="ISO" value="400" id="iso4"> 400    <br><br>
+                <input type="radio" name="ISO" value="800" id="iso5"> 800    <br><br>
+                <input type="radio" name="ISO" value="1600" id="iso6"> 1600  <br><br>
+                <input type="radio" name="ISO" value="3200" id="iso7"> 3200  <br><br>
+                <input type="radio" name="ISO" value="6400" id="iso8"> 6400  <br><br>
+            </div>
+          </div>
+
+          <!-- end of that example -->
         <!-- Columns for radio buttons -->
-        <div id="lightColumns" class="row">
+        <div class="row">
             <div class="column">
                 <div class="lightingName">
                     <p>Aperture</p>
@@ -101,7 +143,7 @@
                 </div>
             </div>
 
-            <divclass="column">
+            <div class="column">
                 <div class="lightingName">
                     <p>Shutter Speed</p>
                 </div>
