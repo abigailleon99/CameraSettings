@@ -41,10 +41,10 @@ footer {
 }
 
 .column {
-    column-count: 1;
     float: left;
-    column-fill: balance;
+    padding: 10px;
 }
+
 /* Clear the row after */
 .row:after {
     content: "";
