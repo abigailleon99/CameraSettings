@@ -44,53 +44,11 @@
                 <div class="column">
                     <canvas id="legoMan" width="1080" height="920" data-caman-id="0" style="width: 600px; height: 401px;"></canvas>
                   </div>
-
-                  <div id="lightingTriangle">
-
-                    <div class="Lighting">
-                        <div class="lightingName">
-                            <p>Aperture</p>
-                        </div>
-                            <!-- <button id='apertureButton'>F-Stop</button> <br> -->
-                            <input type="radio" name="F-Stop" value="1" id="f1"> 1  <br>
-                            <input type="radio" name="F-Stop" value="1.4" id="f2"> 1.4   <br>
-                            <input type="radio" name="F-Stop" value="2" id="f3"> 2  <br>
-                            <input type="radio" name="F-Stop" value="2.8" id="f4"> 2.8 <br>
-                            <input type="radio" name="F-Stop" value="4" id="f5"> 4  <br>
-                            <input type="radio" name="F-Stop" value="5.6" id="f6"> 5.6  <br>
-                            <input type="radio" name="F-Stop" value="8" id="f7"> 8  <br>
-                            <input type="radio" name="F-Stop" value="11" id="f8"> 11   <br>
-                            <input type="radio" name="F-Stop" value="16" id="f9"> 16   
-
-                        </div>
-                    </div>
-        
-                    <div class="Lighting">
-                        <div class="lightingName">
-                            <p>ISO</p>
-                        </div>
-                        <div class="lightingSetting">
-                            <button id='ISOButton'>ISO</button>
-                        </div>
-                    </div>
-        
-                    <div class="Lighting">
-                        <div class="lightingName">
-                            <p>Shutter Speed</p>
-                        </div>
-                        <div class="lightingSetting">
-                            <button id='ShutterButton'>Shutter Speed</button>
-                        </div>
-                    </div>
-        
-                </div>
                 <!-- Original Image -->
                   <div class="column">
-                    <h4>Comparing to the original image</h4>
                     <img src="Lego.JPG" width="1080" height="920" style="width: 600px; height: 401px;">
                     </div>
             </div>
-
         <!-- end of image div -->
 
         <!-- <canvas id="legoMan" width="1080" height="920" data-caman-id="0" style="width: 600px; height: 401px;"></canvas> -->
@@ -98,34 +56,76 @@
          <!-- <h4>Comparing to the original image</h4> -->
          <!-- <img src="Lego.JPG" width="1080" height="920" style="width: 600px; height: 401px;"> -->
         <br>
-        
+
+        <div id="lightingTriangle" class="row">
+            
+            <div class="column">
+                <div class="lightingName">
+                    <p>Aperture</p>
+                </div>
+                    <!-- <button id='apertureButton'>F-Stop</button> <br> -->
+                    <input type="radio" name="F-Stop" value="1" id="f1"> 1  <br>
+                    <input type="radio" name="F-Stop" value="1.4" id="f2"> 1.4   <br>
+                    <input type="radio" name="F-Stop" value="2" id="f3"> 2  <br>
+                    <input type="radio" name="F-Stop" value="2.8" id="f4"> 2.8 <br>
+                    <input type="radio" name="F-Stop" value="4" id="f5"> 4  <br>
+                    <input type="radio" name="F-Stop" value="5.6" id="f6"> 5.6  <br>
+                    <input type="radio" name="F-Stop" value="8" id="f7"> 8  <br>
+                    <input type="radio" name="F-Stop" value="11" id="f8"> 11   <br>
+                    <input type="radio" name="F-Stop" value="16" id="f9"> 16   
+
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="lightingName">
+                    <p>ISO</p>
+                </div>
+                <div class="lightingSetting">
+                    <button id='ISOButton'>ISO</button>
+                </div>
+            </div>
+
+            <divclass="column">
+                <div class="lightingName">
+                    <p>Shutter Speed</p>
+                </div>
+                <div class="lightingSetting">
+                    <button id='ShutterButton'>Shutter Speed</button>
+                </div>
+            </div>
+
+        </div>
     
-
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br>
     <!-- SLIDER -->
-    <p id="value">F-Stop</p>
+    <!-- <p id="value">F-Stop</p>
     <div id="value"></div>
-    <script>
-    var data = [1, 1.4, 2, 2.8, 4, 5.6, 8, 11, 16, 22];
-
-    var slider = d3Slider.sliderHorizontal()
-        .domain(d3.extent(data))
-        .width(300)
-        .tickFormat(function(d) {return d})
-        .ticks(data.length)
-        .default(data[0])
-        .on('onchange', val => {
-        d3.select("p#value").text((val));
-        });
-
-    var g = d3.select("div#value").append("svg")
-        .attr("width", 500)
-        .attr("height", 100)
-        .append("g")
-        .attr("transform", "translate(30,30)");
-
-    g.call(slider);
-
-</script>
+    <div id="silder" class="row">
+        <script>
+            var data = [1, 1.4, 2, 2.8, 4, 5.6, 8, 11, 16, 22];
+        
+            var slider = d3Slider.sliderHorizontal()
+                .domain(d3.extent(data))
+                .width(300)
+                .tickFormat(function(d) {return d})
+                .ticks(data.length)
+                .default(data[0])
+                .on('onchange', val => {
+                d3.select("p#value").text((val));
+                });
+        
+            var g = d3.select("div#value").append("svg")
+                .attr("width", 500)
+                .attr("height", 100)
+                .append("g")
+                .attr("transform", "translate(30,30)");
+        
+            g.call(slider);
+        
+        </script>
+    </div> -->
 <!-- End SLIDER -->
     </body>
     <br>

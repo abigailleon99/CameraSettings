@@ -1,5 +1,5 @@
 d3.select('h1')
-    .style('color', 'darkseagreen')
+    .style('color', 'black')
 
 Caman("#legoMan", "Lego.JPG", function () {
     // manipulate image here
