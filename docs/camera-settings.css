@@ -17,7 +17,7 @@ footer {
 }
 
 .lightingName.column{
-    /* column-count: 1; */
+    column-count: 1;
     /* column-fill: balance; */
     /* column-gap: 100px; */
 }
