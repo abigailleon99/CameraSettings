@@ -2,15 +2,10 @@ d3.select('h1')
     .style('color', 'black')
 
 Caman("#legoMan", "Lego.JPG", function () {
-    d3.select().on('click', fstopOne)
-    function fstopOne(){
-    }
-
-
-    // OVEREXOPSE image here
+    // manipulate image here
     this.exposure(100).render();
-    // this.brightness(1).render();
-    // this.noise(1).render();
+    this.brightness(1).render();
+    this.noise(1).render();
 
   });
 
@@ -25,3 +20,10 @@ Caman("#legoMan", "Lego.JPG", function () {
 
   // buttons to change things START HERE
 
+//   d3.select("#f1").on('click', fstopOne)
+
+//     function fstopOne(){
+//         Caman('#legoMan', 'Lego.JPG', function(){
+//             this.brightness(100).render();
+//         }
+//     }
