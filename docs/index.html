@@ -11,9 +11,6 @@
 
         <!-- Loading in Caman (finally!)-->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.min.js"></script>
-        <!-- Slider stuff -->
-        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
-        <script src="https://unpkg.com/d3-simple-slider@0.1.2/build/d3-simple-slider.js"></script>
 
     </head>
 
@@ -23,11 +20,14 @@
             @import url('https://fonts.googleapis.com/css?family=Gravitas+One&display=swap');
             @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
         </style>
+
+
         <!-- Header -->
         <h1 align = 'center' >CAMERA SETTINGS: LIGHTING</h1>
         <h2>The Basics</h2>
         <img src="IMG_7447.png" alt="exposure triangle" width="20%" height="30%" >
         <script src="camera-settings.js"></script>
+
         <!-- Definition Headers-->
         <h4>Aperture: </h4 >
             <p>The opening in a lens through which light passes to enter the camera and is measured in 'F-stop'. </p>
@@ -35,10 +35,10 @@
             <p>How sensitive the sensor/film is to light. ISO is its' own measurement.</p>
         <h4>Shutter Speed:</h4> 
             <p>How fast the shutter closes and is measured in seconds. </p>
+
         <br>
         <br>
         <h2> Let's put these into practice</h2>   
-
 
         <!-- create a div for the images to be side by side -->
             <div class="row">
@@ -53,12 +53,8 @@
             </div>
         <!-- end of image div -->
 
-        <!-- <canvas id="legoMan" width="1080" height="920" data-caman-id="0" style="width: 600px; height: 401px;"></canvas> -->
-         <!-- Comparing to Original Image -->
-         <!-- <h4>Comparing to the original image</h4> -->
-         <!-- <img src="Lego.JPG" width="1080" height="920" style="width: 600px; height: 401px;"> -->
         <br>
-
+        <h3> Use the tools below to change the exposure of the image</h3>   
         <div id="lightingTriangle" class="row">
             
             <div class="column">
@@ -121,34 +117,6 @@
     
         <br><br><br><br><br><br><br><br><br><br><br><br><br>
     
-    <!-- SLIDER -->
-    <!-- <p id="value">F-Stop</p>
-    <div id="value"></div>
-    <div id="silder" class="row">
-        <script>
-            var data = [1, 1.4, 2, 2.8, 4, 5.6, 8, 11, 16, 22];
-        
-            var slider = d3Slider.sliderHorizontal()
-                .domain(d3.extent(data))
-                .width(300)
-                .tickFormat(function(d) {return d})
-                .ticks(data.length)
-                .default(data[0])
-                .on('onchange', val => {
-                d3.select("p#value").text((val));
-                });
-        
-            var g = d3.select("div#value").append("svg")
-                .attr("width", 500)
-                .attr("height", 100)
-                .append("g")
-                .attr("transform", "translate(30,30)");
-        
-            g.call(slider);
-        
-        </script>
-    </div> -->
-<!-- End SLIDER -->
     </body>
     <br>
     <br>

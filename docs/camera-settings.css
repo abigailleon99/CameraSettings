@@ -19,6 +19,13 @@ h2{
     text-align: center;
 }
 
+h3{
+    background-color: #31708e;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
+    color: #eae7dc;
+}
+
 h4{
     color: #31708e;
     font-family: 'Open Sans Condensed', sans-serif;
@@ -37,6 +44,12 @@ footer {
     float: left;
     column-fill: balance;
 }
+/* Clear the row after */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
 /* .lightingName .column {
     column-count: 3;
