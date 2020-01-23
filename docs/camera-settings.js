@@ -1,13 +1,18 @@
 d3.select('h1')
     .style('color', 'black')
 
-// Caman("#legoMan", "Lego.JPG", function () {
-//     // manipulate image here
-//     this.exposure(90).render();
-//     this.brightness(100).render();
-//     this.noise(50).render();
+Caman("#legoMan", "Lego.JPG", function () {
+    d3.select().on('click', fstopOne)
+    function fstopOne(){
+    }
 
-//   });
+
+    // OVEREXOPSE image here
+    this.exposure(100).render();
+    // this.brightness(1).render();
+    // this.noise(1).render();
+
+  });
 
   // Make some buttons for each of the settings and then have them as the presets. 
   // So now maybe make it seem like the brightness is doubling
@@ -20,9 +25,3 @@ d3.select('h1')
 
   // buttons to change things START HERE
 
-  d3.select("#f1").on('click', fstopOne)
-    function fstopOne(){
-        Caman('#legoMan', 'Lego.JPG', function(){
-            this.brightness(100).render();
-        }
-    }
