@@ -1,15 +1,31 @@
+body{
+    background-color: #F7F9FB;
+}
+
+
 h1 {
     text-align: center;
-    font-family: 'Gravitas One', cursive;
+    /* font-family: 'Gravitas One', cursive; */
+    font-family: 'Open Sans Condensed', sans-serif;
     font-size: 40px;
+    background-color:#eae7dc;
+
+}
+
+h2{
+    color: #f7f9fb;
+    font-family: 'Open Sans Condensed', sans-serif;
+    background-color: #687864;
+    text-align: center;
 }
 
 h4{
-    color: mediumblue;
+    color: #31708e;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 p{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 footer {
@@ -19,6 +35,7 @@ footer {
 .column {
     column-count: 1;
     float: left;
+    column-fill: balance;
 }
 
 /* .lightingName .column {
