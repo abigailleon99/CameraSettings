@@ -16,17 +16,6 @@ Caman("#legoMan", "Lego.JPG", function () {
 
   });
 
-  // Make some buttons for each of the settings and then have them as the presets. 
-  // So now maybe make it seem like the brightness is doubling
-
-  //ISO will have to be the noise/ gain of an image. There will have to be a make up for it. 
-
-  // Shutter speed will have to be different. I will try to make it seem like the brightness isn't 
-  //the same as the aperature... but at the same time it will me 
-
-
-  // buttons to change things START HERE
-
 //   d3.select("#f1").on('click', fstopOne)
 
 //     function fstopOne(){
