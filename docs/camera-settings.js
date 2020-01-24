@@ -15,7 +15,7 @@ Caman("#legoMan", "Lego.JPG", function () {
         console.log('ISO changed to ' + this.value);
 
         Caman("#legoMan", "Lego.JPG", function () {
-            this.noise(10).render();
+            this.brightness(-10).render();
 
         });
 
@@ -39,10 +39,22 @@ Caman("#legoMan", "Lego.JPG", function () {
         console.log('Shutter Speed changed to ' + this.value);
 
         Caman("#legoMan", "Lego.JPG", function () {
-            this.noise(10).render();
+            this.exposure(-20).render();
 
         });
 
+    })
+
+
+    //Reset BUTTON
+    const resetButton = d3.selectAll('input[name=reset]');
+    resetButton.on('click', function(d){
+        console.log(this.value);
+
+        Caman("#legoMan", "Lego.JPG", function () {
+                this.revert(false);
+                this.render();
+            });
     })
 
   });
