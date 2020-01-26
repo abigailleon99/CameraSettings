@@ -30,6 +30,14 @@ h4{
     font-size: 18px;
 }
 
+h5{
+    background-color:#eae7dc;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
+    font-size: 20px;
+
+}
+
 p{
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 20px;
@@ -37,10 +45,13 @@ p{
 
 ul{
     font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+
 }
 
 footer {
-    font-size: 10pt;
+    font-size: 12pt;
+    text-align: center;
 }
 
 .column {
