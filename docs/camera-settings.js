@@ -2,14 +2,12 @@ d3.select('h1')
     .style('color', 'black')
 
 Caman("#legoMan", "Lego.JPG", function () {
-    //manipulate image here 
-    // this.exposure(100).render();
-    // this.brightness(1).render();
-    // this.noise(100).render();
+//manipulate image here 
 
-
-  //ISO BUTTON
+//ISO BUTTON
   const isoButton = d3.selectAll('input[name=ISO]');
+
+//ISO FUNCTION
   isoButton.on('change', function(d) {
         console.log('ISO changed to ' + this.value);
 
@@ -20,8 +18,10 @@ Caman("#legoMan", "Lego.JPG", function () {
 
     })
 
-    //APERTURE BUTTON
+//APERTURE BUTTON
     const apertureButton = d3.selectAll('input[name=F-Stop]');
+
+//APERTURE FUNCTION
     apertureButton.on('change', function(d) {
         console.log('Aperture changed to ' + this.value);
 
@@ -32,8 +32,10 @@ Caman("#legoMan", "Lego.JPG", function () {
 
     })
 
-    //SHUTTER SPEED BUTTON
+//SHUTTER SPEED BUTTON
     const shuttterButton = d3.selectAll('input[name=shutterSpeed]');
+
+//SHUTTER FUNCTION
     shuttterButton.on('change', function(d) {
         console.log('Shutter Speed changed to ' + this.value);
 
@@ -44,18 +46,32 @@ Caman("#legoMan", "Lego.JPG", function () {
 
     })
 
-
-    //Reset BUTTON
+//Reset BUTTON
     const resetButton = d3.selectAll('input[name=reset]');
-    resetButton.on('click', function(d){
-        console.log(this.value);
 
+//RESET FUNCTION
+    resetButton.on('click', function(d){
+        console.log(this.value); //should log 'RESET'
+    //CLEARING THE IMAGE OF ANY MANIPUTATION
         Caman("#legoMan", "Lego.JPG", function () {
                 this.revert(false);
                 this.render();
             });
+        //CLEARING THE RADIO BUTTON CHOICES            
+        var clearISO= document.getElementsByName('ISO');
+        var clearFS= document.getElementsByName('F-Stop');
+        var clearSS= document.getElementsByName('shutterSpeed');
+        //ISO CLEARED
+        for(var i=0; i<clearISO.length; i++)
+            clearISO[i].checked = false;
+        //APERTURE CLEARED
+        for(var i=0; i<clearFS.length; i++)
+            clearFS[i].checked = false;
+        //SHUTTER SPEED CLEARED
+        for(var i=0; i<clearSS.length; i++)
+            clearSS[i].checked = false;
     })
 
-  });
- 
-    
+
+
+});
