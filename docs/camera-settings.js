@@ -12,7 +12,7 @@ Caman("#legoMan", "Lego.JPG", function () {
         console.log('ISO changed to ' + this.value);
 
         Caman("#legoMan", "Lego.JPG", function () {
-            this.brightness(-10).render();
+            this.noise(10).render();
 
         });
 
@@ -26,7 +26,7 @@ Caman("#legoMan", "Lego.JPG", function () {
         console.log('Aperture changed to ' + this.value);
 
         Caman("#legoMan", "Lego.JPG", function () {
-            this.noise(10).render();
+            this.brightness(10).render();
 
         });
 

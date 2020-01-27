@@ -26,12 +26,10 @@
         <!-- Header -->
         <h1 align = 'center' >CAMERA SETTINGS: LIGHTING</h1>
         <h2>The Basics</h2>
-
         <img src="IMG_7447.png" alt="exposure triangle" width="20%" height="30%" >
-       
         <script src="camera-settings.js"></script>
 
-        <!-- Definition Headers-->
+        <!-- The Basics: Definitions-->
         <h4>Aperture: </h4 >
             <ul>
                 <li>The opening in a lens through which light passes to enter the camera and is measured in 'F-stop'.</li>
@@ -60,33 +58,34 @@
             exposure of a photograph.
         </p>
         <h3> Use the tools below to change the exposure of the image</h3>   
-        <!-- create a div for the images to be side by side -->
+
+        <!-- Created a div for the images to be side by side in two columns -->
             <div class="row">
-                <!-- Canvas and Image -->
+                <!-- Canvas and Image that will be manipulated -->
                 <div class="column">
                     <img src="Lego.JPG" width="1920" height="1080" style="width: 400px; height: 270px;">
-                  </div>
+                </div>
                 <!-- Original Image -->
-                  <div class="column">
+                <div class="column">
                     <canvas id="legoMan" width="1080" height="920" data-caman-id="0" style="width: 400px; height: 270px;"></canvas>
-                    </div>
-                  <div class="column">
+                </div>
+            </div>
 
         <!-- THREE EXPOSURE TOOLS IN COLUMNS -->
 
         <div class="row">
             <div class="column" style="background-color:#edeae5;">
-              <h4>Aperture</h4>
-              <p>lighter</p>
-                <input type="radio" name="F-Stop" value="1" id="f1"> 1     <br>
-                <input type="radio" name="F-Stop" value="1.4" id="f2"> 1.4 <br>
-                <input type="radio" name="F-Stop" value="2" id="f3"> 2     <br>
-                <input type="radio" name="F-Stop" value="2.8" id="f4"> 2.8 <br>
-                <input type="radio" name="F-Stop" value="4" id="f5"> 4     <br>
-                <input type="radio" name="F-Stop" value="5.6" id="f6"> 5.6 <br>
-                <input type="radio" name="F-Stop" value="8" id="f7"> 8     <br>
-                <input type="radio" name="F-Stop" value="11" id="f8"> 11   <br>
-                <input type="radio" name="F-Stop" value="16" id="f9"> 16   
+                <h4>Aperture</h4>
+                <p>lighter</p>
+                    <input type="radio" name="F-Stop" value="1" id="f1"> 1     <br>
+                    <input type="radio" name="F-Stop" value="1.4" id="f2"> 1.4 <br>
+                    <input type="radio" name="F-Stop" value="2" id="f3"> 2     <br>
+                    <input type="radio" name="F-Stop" value="2.8" id="f4"> 2.8 <br>
+                    <input type="radio" name="F-Stop" value="4" id="f5"> 4     <br>
+                    <input type="radio" name="F-Stop" value="5.6" id="f6"> 5.6 <br>
+                    <input type="radio" name="F-Stop" value="8" id="f7"> 8     <br>
+                    <input type="radio" name="F-Stop" value="11" id="f8"> 11   <br>
+                    <input type="radio" name="F-Stop" value="16" id="f9"> 16   
 <!-- drop down menu -->
                <!-- <select name="Aperture" id="apertureOpt">
                 <option value="1"> 1</option>
@@ -104,16 +103,16 @@
 
             </div>
             <div class="column" style="background-color:#bbb;">
-              <h4>ISO</h4>
-              <p>darker/less noise</p>
-                <!-- <input type="radio" id="ISO" value="50" id="iso1"> 50        <br> -->
-                <input type="radio" name="ISO" value="100" id="iso2"> 100    <br>
-                <input type="radio" name="ISO" value="200" id="iso3"> 200    <br>
-                <input type="radio" name="ISO" value="400" id="iso4"> 400    <br>
-                <input type="radio" name="ISO" value="800" id="iso5"> 800    <br>
-                <input type="radio" name="ISO" value="1600" id="iso6"> 1600  <br>
-                <input type="radio" name="ISO" value="3200" id="iso7"> 3200  <br>
-                <input type="radio" name="ISO" value="6400" id="iso8"> 6400  <br>
+                <h4>ISO</h4>
+                <p>darker/less noise</p>
+                    <input type="radio" name="ISO" id="iso1" value="50"> 50 <br>
+                    <input type="radio" name="ISO" value="100" id="iso2"> 100    <br>
+                    <input type="radio" name="ISO" value="200" id="iso3"> 200    <br>
+                    <input type="radio" name="ISO" value="400" id="iso4"> 400    <br>
+                    <input type="radio" name="ISO" value="800" id="iso5"> 800    <br>
+                    <input type="radio" name="ISO" value="1600" id="iso6"> 1600  <br>
+                    <input type="radio" name="ISO" value="3200" id="iso7"> 3200  <br>
+                    <input type="radio" name="ISO" value="6400" id="iso8"> 6400  <br>
 <!-- drop down menu -->
                 <!-- <select name="Aperture" id="apertureOpt">
                     <option value="100"> 100</option>
@@ -128,17 +127,17 @@
                 <p>lighter/more noise</p>
             </div>
             <div class="column" style="background-color:#ccc;">
-              <h4>Shutter Speed</h4>
-              <p>lighter</p>
-              <input type="radio" name="shutterSpeed" value="3" id="ss1"> 3           <br>
-              <input type="radio" name="shutterSpeed" value="1" id="ss2"> 1           <br>
-              <input type="radio" name="shutterSpeed" value="1/2" id="ss3"> 1/2       <br>
-              <input type="radio" name="shutterSpeed" value="1/4" id="ss4"> 1/4       <br>
-              <input type="radio" name="shutterSpeed" value="1/15" id="ss5"> 1/15     <br>
-              <input type="radio" name="shutterSpeed" value="1/60" id="ss6"> 1/60     <br>
-              <input type="radio" name="shutterSpeed" value="1/250" id="ss7"> 1/250   <br>
-              <input type="radio" name="shutterSpeed" value="1/500" id="ss8"> 1/500   <br>
-              <input type="radio" name="shutterSpeed" value="1/1000" id="ss9"> 1/1000 <br>
+                <h4>Shutter Speed</h4>
+                <p>lighter</p>
+                    <input type="radio" name="shutterSpeed" value="3" id="ss1"> 3           <br>
+                    <input type="radio" name="shutterSpeed" value="1" id="ss2"> 1           <br>
+                    <input type="radio" name="shutterSpeed" value="1/2" id="ss3"> 1/2       <br>
+                    <input type="radio" name="shutterSpeed" value="1/4" id="ss4"> 1/4       <br>
+                    <input type="radio" name="shutterSpeed" value="1/15" id="ss5"> 1/15     <br>
+                    <input type="radio" name="shutterSpeed" value="1/60" id="ss6"> 1/60     <br>
+                    <input type="radio" name="shutterSpeed" value="1/250" id="ss7"> 1/250   <br>
+                    <input type="radio" name="shutterSpeed" value="1/500" id="ss8"> 1/500   <br>
+                    <input type="radio" name="shutterSpeed" value="1/1000" id="ss9"> 1/1000 <br>
 <!-- drop down menu -->             
               <!-- <select name="Aperture" id="apertureOpt">
                 <option value="1"> 1</option>
@@ -152,17 +151,16 @@
                </select> -->
               <p>darker</p>
             </div>
-          </div>
-          <div>
-              <br>
+        </div>
+        <div>
+            <br>
             <input type="button" name="reset" value="RESET">
             <p>Note: It may take a moment before the image is reset.</p>
-          </div>
-          <!-- end of columns -->
-                  </div>
-            </div>
-        <!-- end of image div -->
-        <h5> MORE </h5>   
+        </div>
+        <!-- END OF COLUMNS DIV -->
+
+    <!-- Interim Project Credits -->
+    <h5> MORE </h5>   
           <p>Helpful Resources for this project:
               <ul>
                 <a href="http://camanjs.com/examples/"> CamanJS<a> </a>
@@ -172,6 +170,7 @@
             </ul>
           </p>
     </body>
+
     <hr>
     <footer> This website was created by Abigail Leon to fulfill 
         the requirements of <a href="https://rpruim.github.io/D3/"> Math W82: Data Visualization with D3</a> 
