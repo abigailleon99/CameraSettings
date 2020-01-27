@@ -1,7 +1,6 @@
 d3.select('h1')
     .style('color', 'black')
 
-
 Caman("#legoMan", "Lego.JPG", function () {
     //manipulate image here 
     // this.exposure(100).render();
