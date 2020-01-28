@@ -63,3 +63,17 @@ footer {
     clear: both;
   }
   
+.filter-name {
+    background: #6f4e37;
+    padding: 4px;
+    display: inline-block;
+    color: white;
+    width: 100px;
+    border-radius: 4px;
+    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+
+  
+  

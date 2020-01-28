@@ -9,22 +9,18 @@
         <link rel="stylesheet" href="camera-settings.css" />
          <!-- Load d3.js -->
         <script src="https://d3js.org/d3.v5.js"></script>
-
         <!-- Loading in Caman (finally!)-->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.min.js"></script>
-
     </head>
 
     <body>
-
         <style>
             @import url('https://fonts.googleapis.com/css?family=Gravitas+One&display=swap');
             @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
         </style>
 
-
         <!-- Header -->
-        <h1 align = 'center' >CAMERA SETTINGS: LIGHTING</h1>
+        <h1 align = 'center'>CAMERA SETTINGS: LIGHTING</h1>
         <h2>The Basics</h2>
         <img src="IMG_7447.png" alt="exposure triangle" width="20%" height="30%" >
         <script src="camera-settings.js"></script>
@@ -32,32 +28,40 @@
         <!-- The Basics: Definitions-->
         <h4>Aperture: </h4 >
             <ul>
-                <li>The opening in a lens through which light passes to enter the camera and is measured in 'F-stop'.</li>
+                <li>The opening in a lens through which light passes to enter the camera and is measured in 'F-stop'. 
+                    As the aperture hole opens up, more and more light comes in and the picuture gets brighter and brighter.
+                    As you close the hole, less light makes it through, so the image gets darker. 
+                </li>
             </ul>
             <h4>ISO:</h4> 
             <ul>
                 <li>
-                    How sensitive the sensor/film is to light. ISO is its own measurement.
+                    How sensitive the sensor/film is to light. ISO is its own measurement. 
+                    The higher the ISO, the brighter the image, also it will produce more noise/grain. 
+                    The lower the ISO, the darker the image, but the image will not be as grainy or have as much noise.
                 </li>
             </ul>
         <h4>Shutter Speed:</h4> 
             <ul>
                 <li>
-                    How fast the shutter closes and is measured in seconds.
+                    How fast the shutter closes and is measured in seconds. The faster you make your shutter open and close, 
+                    the darker your image will be because light has less time to make it through. When you have a long shutter speed
+                    your image is brighter. This is because you have more time for the light to enter.
                 </li>
             </ul>
         <br>
         <h2> Let's put these into practice</h2>   
         <p>
             Below are two images. On the right is the image we will be able to transform, while on the left, 
-            is the image in the original condition. This way we can have a side by side comparision of how we 
+            is the original image. This way we can have a side by side comparision of how we 
             changed the image.
         </p>
         <p>
-            We will be exploring ISO, F-Stop and Shutter Speed to see how they have an effect on the overall
+            We will be exploring ISO, aperture and shutter speed to see how they have an effect on the overall
             exposure of a photograph.
         </p>
-        <h3> Use the tools below to change the exposure of the image</h3>   
+        
+        <h3> Use the tools below to change the exposure of the image.</h3>   
 
         <!-- Created a div for the images to be side by side in two columns -->
             <div class="row">
@@ -75,9 +79,9 @@
 
         <div class="row">
             <div class="column" style="background-color:#edeae5;">
-                <h4>Aperture</h4>
-                <p>lighter</p>
-                    <input type="radio" name="F-Stop" value="1" id="f1"> 1     <br>
+                <!-- <h4>Aperture</h4> -->
+                <!-- <p>opening/lighter</p> -->
+                    <!-- <input type="radio" name="F-Stop" value="1" id="f1"> 1     <br>
                     <input type="radio" name="F-Stop" value="1.4" id="f2"> 1.4 <br>
                     <input type="radio" name="F-Stop" value="2" id="f3"> 2     <br>
                     <input type="radio" name="F-Stop" value="2.8" id="f4"> 2.8 <br>
@@ -85,8 +89,11 @@
                     <input type="radio" name="F-Stop" value="5.6" id="f6"> 5.6 <br>
                     <input type="radio" name="F-Stop" value="8" id="f7"> 8     <br>
                     <input type="radio" name="F-Stop" value="11" id="f8"> 11   <br>
-                    <input type="radio" name="F-Stop" value="16" id="f9"> 16   
-<!-- drop down menu -->
+                    <input type="radio" name="F-Stop" value="16" id="f9"> 16    -->
+
+                    <!-- <input id="Aperture" name="Aperture" type="range" min="0" max="100" value="0"> -->
+
+        <!-- drop down menu -->
                <!-- <select name="Aperture" id="apertureOpt">
                 <option value="1"> 1</option>
                 <option value="1.4"> 1.4</option>
@@ -99,20 +106,28 @@
                 <option value="16"> 16</option>
                </select>
                 -->
-                <p>darker</p>
+                <!-- <p>closing/darker</p> -->
 
+        <!-- MINUS/PLUS BUTTONS -->
+                <button id="brightness-dec" style="font-family:'Open Sans Condensed', sans-serif;">-</button>
+                <span class="filter-name">Aperture</span>
+                <button id="brightness-inc" style="font-family:'Open Sans Condensed', sans-serif;">+</button>
             </div>
-            <div class="column" style="background-color:#bbb;">
-                <h4>ISO</h4>
-                <p>darker/less noise</p>
-                    <input type="radio" name="ISO" id="iso1" value="50"> 50 <br>
+
+        <!-- ISO -->
+            <div class="column" style="background-color:#edeae5;">
+                <!-- <h4>ISO</h4> -->
+                <!-- <p>darker/less noise</p> -->
+                    <!-- <input type="radio" name="ISO" value="50" id= "50" > 50 <br>
                     <input type="radio" name="ISO" value="100" id="iso2"> 100    <br>
                     <input type="radio" name="ISO" value="200" id="iso3"> 200    <br>
                     <input type="radio" name="ISO" value="400" id="iso4"> 400    <br>
                     <input type="radio" name="ISO" value="800" id="iso5"> 800    <br>
                     <input type="radio" name="ISO" value="1600" id="iso6"> 1600  <br>
                     <input type="radio" name="ISO" value="3200" id="iso7"> 3200  <br>
-                    <input type="radio" name="ISO" value="6400" id="iso8"> 6400  <br>
+                    <input type="radio" name="ISO" value="6400" id="iso8"> 6400  <br> -->
+
+                    <!-- <input id="ISO" name="ISO" type="range" min="0" max="100" value="0"> -->
 <!-- drop down menu -->
                 <!-- <select name="Aperture" id="apertureOpt">
                     <option value="100"> 100</option>
@@ -123,13 +138,17 @@
                     <option value="3200"> 3200</option>
                     <option value="6400"> 6400</option>
                    </select> -->
-                <br>
-                <p>lighter/more noise</p>
+                <!-- <br> -->
+                <!-- <p>lighter/more noise</p> -->
+        <!-- MINUS/PLUS BUTTONS -->
+                <button id="noise-dec" style="font-family:'Open Sans Condensed', sans-serif;">-</button>
+                <span class="filter-name" >ISO</span>
+                <button id="noise-inc" style="font-family:'Open Sans Condensed', sans-serif;">+</button>
             </div>
-            <div class="column" style="background-color:#ccc;">
-                <h4>Shutter Speed</h4>
-                <p>lighter</p>
-                    <input type="radio" name="shutterSpeed" value="3" id="ss1"> 3           <br>
+            <div class="column" style="background-color:#edeae5;">
+                <!-- <h4>Shutter Speed</h4> -->
+                <!-- <p>slower/brighter</p> -->
+                    <!-- <input type="radio" name="shutterSpeed" value="3" id="ss1"> 3           <br>
                     <input type="radio" name="shutterSpeed" value="1" id="ss2"> 1           <br>
                     <input type="radio" name="shutterSpeed" value="1/2" id="ss3"> 1/2       <br>
                     <input type="radio" name="shutterSpeed" value="1/4" id="ss4"> 1/4       <br>
@@ -137,7 +156,9 @@
                     <input type="radio" name="shutterSpeed" value="1/60" id="ss6"> 1/60     <br>
                     <input type="radio" name="shutterSpeed" value="1/250" id="ss7"> 1/250   <br>
                     <input type="radio" name="shutterSpeed" value="1/500" id="ss8"> 1/500   <br>
-                    <input type="radio" name="shutterSpeed" value="1/1000" id="ss9"> 1/1000 <br>
+                    <input type="radio" name="shutterSpeed" value="1/1000" id="ss9"> 1/1000 <br> -->
+
+                    <!-- <input id="Shutter Speed" name="Shutter Speed" type="range" min="0" max="100" value="0"> -->
 <!-- drop down menu -->             
               <!-- <select name="Aperture" id="apertureOpt">
                 <option value="1"> 1</option>
@@ -149,24 +170,34 @@
                 <option value="1/500"> 1/500</option>
                 <option value="1/1000"> 1/1000</option>
                </select> -->
-              <p>darker</p>
+              <!-- <p>faster/darker</p> -->
+        <!-- MINUS/PLUS BUTTONS -->
+              <button id="exposure-dec" style="font-family:'Open Sans Condensed', sans-serif;">-</button>
+              <span class="filter-name">Shutter</span>
+              <button id="exposure-inc" style="font-family:'Open Sans Condensed', sans-serif;">+</button>
             </div>
         </div>
         <div>
             <br>
+            <h4>Use the MINUS sign to DECREASE the exposure. <br> Use the PLUS sign to INCREASE exposure.</h4>
+            <!-- Reset Button -->
             <input type="button" name="reset" value="RESET">
-            <p>Note: It may take a moment before the image is reset.</p>
+            <p>Note: It may take a moment before the image is changed or reset.</p>
         </div>
-        <!-- END OF COLUMNS DIV -->
+
+<!-- END OF COLUMNS DIV -->
 
     <!-- Interim Project Credits -->
     <h5> MORE </h5>   
           <p>Helpful Resources for this project:
-              <ul>
+            <ul>
                 <a href="http://camanjs.com/examples/"> CamanJS<a> </a>
-             </ul>
-             <ul> 
+            </ul>
+            <ul> 
                 <a href="https://codepen.io/SitePoint/full/LVpNjp/">  Examples using CamanJS </a>
+            </ul>
+            <ul>
+                <a href="https://code.tutsplus.com/tutorials/creating-an-image-editor-using-camanjs-applying-basic-filters--cms-30251"> Basic Image Editor</a>
             </ul>
           </p>
     </body>
